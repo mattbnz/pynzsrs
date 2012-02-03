@@ -1,0 +1,39 @@
+NZRS SRS Python Client
+======================
+
+Version: 0.1
+
+Copyright 2012 Matt Brown. 
+
+This is a python implementation of the NZRS SRS protocol as defined by
+http://tools.ietf.org/html/draft-nzrs-srs-02.
+
+This is not an official implementation, and is not endorsed by NZRS in any way.
+
+This implementation does attempt to maintain compatibility with the
+configuration file format and command line arguments of the official Registrar
+Implementation Kit (RIK) supplied by NZRS.
+
+
+Installation Instructions
+-------------------------
+
+TODO.
+
+
+Pre-requisites
+--------------
+
+* Python >= 2.7
+* python-gnupg: http://code.google.com/p/python-gnupg/
+
+How-to Use
+----------
+
+Where request and response are UTF-8 encoded XML documents following the SRS
+spec.
+
+>>> from pynzsrs import client
+>>> c = client.SRSClient(argv)
+>>> response = c.SendXML(request)
+
